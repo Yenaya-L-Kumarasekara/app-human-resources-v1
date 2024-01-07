@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AttendanceController;
-
+use App\Http\Controllers\FindDuplicatesController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -26,3 +26,5 @@ Route::controller(AttendanceController::class)->group(function (){
     Route::get('/v1/employee-attendance','getEmployeeAttendanceInfo');
 
 });
+
+Route::post('/v1/find-duplicates', [FindDuplicatesController::class, 'findDuplicates']);
