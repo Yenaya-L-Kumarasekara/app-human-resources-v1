@@ -16,7 +16,7 @@ return new class extends Migration
             $table->dateTime('check_in')->nullable();
             $table->dateTime('check_out')->nullable();
             $table->foreignId('employee_id')->constrained();
-            $table->foreignId('schedule_id')->constrained()->nullable(); 
+            $table->foreignId('schedule_id')->nullable()->constrained(); 
             $table->timestamps();
         });
     }
